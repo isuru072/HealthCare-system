@@ -6,7 +6,7 @@ import javax.ws.rs.core.MediaType;
 
 @Path("/HCHome") 
 public class testClass {
-
+	
 	@GET@Path("/")
 	@Produces(MediaType.TEXT_PLAIN)
 	public String hello() {
