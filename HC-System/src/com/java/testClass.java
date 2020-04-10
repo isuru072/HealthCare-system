@@ -8,7 +8,7 @@ import javax.ws.rs.core.MediaType;
 public class testClass {
 	
 	@GET@Path("/")
-	@Produces(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.APPLICATION_JSON)
 	public String hello() {
 		return"Welcome to the Health Care System"; 
 	}
