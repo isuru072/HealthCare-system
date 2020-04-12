@@ -12,10 +12,12 @@
   <servlet>
 	  <servlet-name>Jersey Web Application</servlet-name>
 	  <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+	  
 	  <load-on-startup>1</load-on-startup>
 	  </servlet>
   <servlet-mapping>
 	  <servlet-name>Jersey Web Application</servlet-name>
 	  <url-pattern>/master/*</url-pattern>
   </servlet-mapping>
+  
 </web-app>
