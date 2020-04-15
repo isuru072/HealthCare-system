@@ -2,7 +2,7 @@ package com.resources;
 import java.sql.*; 
 
 public class connect {
-	public Connection connectMethod() {
+	public static Connection connectMethod() {
 		
 		Connection con = null;
 		try {
