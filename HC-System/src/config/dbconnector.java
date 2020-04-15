@@ -10,7 +10,7 @@ public class dbconnector {
 	{
 		Connection con = null;
 		
-		String url = "jdbc:mysql://localhost:8080/hcdb";
+		String url = "jdbc:mysql://localhost/hcdb";
 		String username = "root";
 		String password = "";
 		
@@ -19,11 +19,9 @@ public class dbconnector {
 		{
 			Class.forName("com.mysql.jdbc.Driver");
 			System.out.println("Connection Top");
-			//con =  (Connection) DriverManager.getConnection(url,username,password);
-			con = DriverManager.getConnection("jdbc:mysql://localhost/hcdb?user="+username+"&password="+password);
-			System.out.println("Connection Done");
+			con =  (Connection) DriverManager.getConnection(url,username,password);
 			if (con != null) {
-                System.out.println("Connected to the fail");
+                System.out.println("Connected to the done");
             }
 		}catch(Exception e) {
 			System.out.println(e);

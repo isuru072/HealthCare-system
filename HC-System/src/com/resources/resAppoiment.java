@@ -14,15 +14,15 @@ import com.java.appoiment;
 @Path("/getAppoiment")
 public class resAppoiment {
 	cntAppoiment appdata = new cntAppoiment();
+	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<appoiment> getPatients()
+	public List<appoiment> getAppoiment()
 	{
 		System.out.println("Appoiments from DB...");
 		return appdata.getAppoiment();
 	}
-
-	
+		
 	
 		
 }
