@@ -1,8 +1,5 @@
 package com.java;
 
-import java.sql.Date;
-import java.sql.Time;
-
 import javax.xml.bind.annotation.XmlRootElement;
 
 
@@ -11,8 +8,8 @@ public class appoiment {
 	private int Id;
 	private String dname;
 	private String pname;
-	private Date date;
-	private Time time;
+	private String date;
+	private String time;
 	
 	
 	public int getId() {
@@ -33,16 +30,16 @@ public class appoiment {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		this.date = date;
 	}
-	public Time getTime() {
+	public String getTime() {
 		return time;
 	}
-	public void setTime(Time time) {
+	public void setTime(String time) {
 		this.time = time;
 	}
 	

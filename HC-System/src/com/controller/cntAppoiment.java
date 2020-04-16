@@ -4,6 +4,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
+import javax.lang.model.type.IntersectionType;
+
 import java.sql.*;
 import com.java.appoiment;
 
@@ -35,8 +38,11 @@ public class cntAppoiment {
 					  appdata.setId(rs.getInt(1));
 					  appdata.setDname(rs.getString(2));
 					  appdata.setPname(rs.getString(3));
-					  appdata.setDate(rs.getDate(4));
-					  appdata.setTime(rs.getTime(5));
+					  String date = (rs.getDate(4)).toString();
+					  appdata.setDate(date);
+					  
+					  String time = (rs.getTime(5)).toString();
+					  appdata.setTime(time);
 					  
 					  appoimentList.add(appdata);
 				  }
@@ -50,5 +56,35 @@ public class cntAppoiment {
 	   	  
 	   	 return appoimentList;
 	    }
+
+
+	public appoiment getAppoiment(int uid) {
+		String sql = "select * from appointment where id="+uid;
+	   	  appoiment p = new appoiment();
+	   	 try 
+	   	   {
+				  Statement st = con.createStatement();
+				  ResultSet rs = st.executeQuery(sql);
+				  if(rs.next())
+				  {
+					  p.setId(rs.getInt(1));
+					  p.setDname(rs.getString(2));
+					  p.setPname(rs.getString(3));
+					  
+					  String date = (rs.getDate(4)).toString();					  
+					  p.setDate(date);
+					  String time = (rs.getTime(5)).toString();
+					  p.setTime(time);
+					 
+					  
+				  }
+				
+			    } 
+	   	 catch (Exception e) 
+	   	  {				
+			   System.out.println(e);
+			  } 
+	   	 return p;
+	}
 	    
 }
