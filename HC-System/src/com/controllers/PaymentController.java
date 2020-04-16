@@ -9,11 +9,12 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.java.Payment;
+import com.service.PaymentService;
 
 
 @Path("/getAppoiment")
-public class AppoimentControllerT {
-	PaymentController appdata = new PaymentController();
+public class PaymentController {
+	PaymentService appdata = new PaymentService();
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)

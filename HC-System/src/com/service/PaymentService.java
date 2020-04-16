@@ -1,4 +1,4 @@
-package com.controllers;
+package com.service;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -9,11 +9,11 @@ import com.java.Payment;
 
 import com.config.dbconnector;
 
-public class PaymentController {
+public class PaymentService {
 	
 	Connection con = null;
 		
-	public PaymentController()
+	public PaymentService()
 	{		 
 		con = dbconnector.connecter();
 	} 
