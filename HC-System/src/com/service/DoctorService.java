@@ -5,8 +5,14 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 import com.config.dbconnector;
-public class DoctorService {
-Connection con = null;
+
+
+
+
+public class DoctorService{
+	
+	Connection con = null;
+
 	
 	public DoctorService()
 	{		 
@@ -210,3 +216,6 @@ Connection con = null;
 	}
 	
 }
+
+}
+

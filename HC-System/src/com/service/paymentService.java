@@ -1,31 +1,28 @@
 package com.service;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.lang.model.type.IntersectionType;
+import java.sql.*;
+import com.java.Payment;
 
 import com.config.dbconnector;
-import com.resources.payment;
 
-import java.sql.*;
-
-public class paymentService {
+public class PaymentService {
 	
 	Connection con = null;
 		
-	public paymentService()
+	public PaymentService()
 	{		 
 		con = dbconnector.connecter();
 	} 
 	
 	
-	public List<payment>getAppoiment(){		
+	public List<Payment>getAppoiment(){		
 		
 	   	 
-	   	 List<payment> appoimentList = new ArrayList<>();
+	   	 List<Payment> appoimentList = new ArrayList<>();
 	   	 String sql = "select * from appointment";
 	   	 try 
 	   	   {
@@ -34,7 +31,7 @@ public class paymentService {
 				ResultSet rs = st.executeQuery(sql);
 				while(rs.next())
 				  {
-					  payment appdata = new payment();
+					  Payment appdata = new Payment();
 					  appdata.setId(rs.getInt(1));
 					  appdata.setDname(rs.getString(2));
 					  appdata.setPname(rs.getString(3));
@@ -58,9 +55,9 @@ public class paymentService {
 	    }
 
 
-	public payment getAppoiment(int uid) {
+	public Payment getAppoiment(int uid) {
 		String sql = "select * from appointment where id="+uid;
-	   	  payment p = new payment();
+	   	  Payment p = new Payment();
 	   	 try 
 	   	   {
 				  Statement st = con.createStatement();

@@ -1,4 +1,5 @@
 package com.service;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,7 +7,8 @@ import java.sql.ResultSet;
 import com.config.dbconnector;
 
 public class AuthPatientService {
-static Connection con = null;
+	static Connection con = null;
+
 	
 	public AuthPatientService()
 	{		 
@@ -36,4 +38,6 @@ static Connection con = null;
 		}
 		return false;
 	}
+
 }
+

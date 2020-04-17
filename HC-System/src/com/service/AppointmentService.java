@@ -1,4 +1,5 @@
 package com.service;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,7 +8,9 @@ import java.sql.Statement;
 import com.config.dbconnector;
 
 public class AppointmentService {
-Connection con = null;
+
+	Connection con = null;
+
 	
 	public AppointmentService()
 	{		 
@@ -182,5 +185,4 @@ Connection con = null;
 		}
 		return output;
 	}
-
 }

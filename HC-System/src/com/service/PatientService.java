@@ -1,7 +1,10 @@
 package com.service;
-import java.sql.*;
 
+//import file
+import java.sql.*;
 import com.config.dbconnector;
+
+
 public class PatientService {
 Connection con = null;
 	
@@ -213,7 +216,8 @@ Connection con = null;
 		}
 		return output;
 
+}
 
-	
 }
-}
+
+
