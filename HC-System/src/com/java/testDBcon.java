@@ -12,8 +12,9 @@ public class testDBcon {
 	@GET@Path("/")
 	@Produces(MediaType.TEXT_PLAIN)
 	public void getCon() {
+		@SuppressWarnings("unused")
 		connect testCon = new connect();
-		System.out.println(testCon.connectMethod());
+		System.out.println(connect.connectMethod());
 	}
 	
 }
