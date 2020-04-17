@@ -1,7 +1,5 @@
 package com.java;
 
-import java.sql.Date;
-import java.sql.Time;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -13,9 +11,29 @@ public class stock {
 	private String mname;
 	private String description;
 	private int amount;
-	private Date date;
-	private Time time;
 	private int price;
+	
+	
+	
+public stock() {
+		
+	}
+	
+	public stock(int id, String mname, String description, int amount, int price) {
+		super();
+		this.id = id;
+		this.mname = mname;
+		this.description = description;
+		this.amount = amount;
+		this.price = price;
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 	public int getId() {
 		return id;
@@ -41,18 +59,7 @@ public class stock {
 	public void setAmount(int amount) {
 		this.amount = amount;
 	}
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
-	}
-	public Time getTime() {
-		return time;
-	}
-	public void setTime(Time time) {
-		this.time = time;
-	}
+	
 	public int getPrice() {
 		return price;
 	}
